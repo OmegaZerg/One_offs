@@ -1,9 +1,10 @@
 #Dice Roller Game
 # ● ┌ ─ ┐ │ └ ┘
 #print("\u25CF \u250c \u2500 \u2510 \u2502 \u2514 \u2518")
+
 import random
 
-
+#Define Variables
 dice_art = {
     1: ("┌─────────┐", 
         "│         │", 
@@ -40,6 +41,8 @@ dice_art = {
 dice = []
 total = 0
 num_of_dice = int(input("How many dice would you like?: "))
+
+#Begin game logic
 
 for die in range(num_of_dice):
     dice.append(random.randint(1, 6))
