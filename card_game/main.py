@@ -39,11 +39,11 @@ class HighCardRound(Round):
         self.card2 = card2
 
     def resolve_round(self):
-        if self.card1.__gt__(self.card2):
+        if self.card1 > self.card2:
             return 1
-        elif self.card2.__gt__(self.card1):
+        elif self.card2 > self.card1:
             return 2
-        elif self.card1.__eq__(self.card2):
+        elif self.card1 == self.card2:
             return 0
 
 
@@ -53,11 +53,11 @@ class LowCardRound(Round):
         self.card2 = card2
 
     def resolve_round(self):
-        if self.card1.__lt__(self.card2):
+        if self.card1 < self.card2:
             return 1
-        elif self.card2.__lt__(self.card1):
+        elif self.card2 < self.card1:
             return 2
-        elif self.card1.__eq__(self.card2):
+        elif self.card1 == self.card2:
             return 0
 
 #Card closest to the middle(Number of "8", index of 6) wins.
